@@ -17,8 +17,8 @@ store = {
         {'quantity': 27, 'price': 42},
     ],
     '23456': [
-        {'стол1': 22, 'price': 510},
-        {'стол2': 32, 'price': 520},
+        {'quantity': 22, 'price': 510},
+        {'quantity': 32, 'price': 520},
     ],
     '34567': [
         {'quantity': 2, 'price': 1200},
@@ -51,30 +51,30 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
-table_cost = store[goods['Стол']][0]['стол1'] * store[goods['Стол']][0]['price']
-table_cost2 = store[goods['Стол']][1]['стол2'] * store[goods['Стол']][0]['price']
+table_cost = store[goods['Стол']][0]['quantity'] * store[goods['Стол']][0]['price']
+table_cost2 = store[goods['Стол']][1]['quantity'] * store[goods['Стол']][1]['price']
+table_cost_total = table_cost + table_cost2
+table_quantity = store[goods['Стол']][0]['quantity'] + store[goods['Стол']][1]['quantity']
 
 # TODO Надо один раз вывести на консоль общее количество и цену.
 # TODO То есть сначала сложить количесто и цену, а потом уже один раз распечатать.
-print('Стол -', store[goods['Стол']][0]['стол1'], 'шт, стоимость', table_cost, 'руб')
-print('Стол -', store[goods['Стол']][1]['стол2'], 'шт, стоимость', table_cost2, 'руб')
-print('\n')
+print('Стол -', table_quantity, 'шт, стоимость', table_cost_total, 'руб')
+
 sofa_cost = store[goods['Диван']][0]['quantity'] * store[goods['Диван']][0]['price']
 sofa_cost2 = store[goods['Диван']][1]['quantity'] * store[goods['Диван']][1]['price']
-
+sofa_cost_total = sofa_cost + sofa_cost2
+sofa_quantity = store[goods['Диван']][0]['quantity'] + store[goods['Диван']][1]['quantity']
+print('Диван -', sofa_quantity, 'шт, стоимость', sofa_cost_total, 'руб')
 # TODO Аналогично с диванами и стульями
-print('Диван -', store[goods['Диван']][0]['quantity'], 'шт, стоимость', sofa_cost, 'руб')
-print('Диван -', store[goods['Диван']][1]['quantity'], 'шт, стоимость', sofa_cost2, 'руб')
+
 
 chair_cost = store[goods['Стул']][0]['quantity'] * store[goods['Стул']][0]['price']
 chair_cost2 = store[goods['Стул']][1]['quantity'] * store[goods['Стул']][1]['price']
 chair_cost3 = store[goods['Стул']][2]['quantity'] * store[goods['Стул']][2]['price']
-print('\n')
-print('Стул -', store[goods['Стул']][0]['quantity'], 'шт, стоимость', chair_cost, 'руб')
-print('Стул -', store[goods['Стул']][1]['quantity'], 'шт, стоимость', chair_cost2, 'руб')
-print('Стул -', store[goods['Стул']][2]['quantity'], 'шт, стоимость', chair_cost3, 'руб')
 
-
+chair_cost_total = chair_cost + chair_cost2 + chair_cost3
+chair_quantity = store[goods['Стул']][0]['quantity'] + store[goods['Стул']][1]['quantity'] + store[goods['Стул']][2]['quantity']
+print('Стул -', chair_quantity, 'шт, стоимость', chair_cost_total, 'руб')
 
 
 ##########################################################################################
