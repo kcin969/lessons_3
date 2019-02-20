@@ -56,8 +56,7 @@ table_cost2 = store[goods['Стол']][1]['quantity'] * store[goods['Стол']]
 table_cost_total = table_cost + table_cost2
 table_quantity = store[goods['Стол']][0]['quantity'] + store[goods['Стол']][1]['quantity']
 
-# TODO Надо один раз вывести на консоль общее количество и цену.
-# TODO То есть сначала сложить количесто и цену, а потом уже один раз распечатать.
+
 print('Стол -', table_quantity, 'шт, стоимость', table_cost_total, 'руб')
 
 sofa_cost = store[goods['Диван']][0]['quantity'] * store[goods['Диван']][0]['price']
@@ -65,7 +64,7 @@ sofa_cost2 = store[goods['Диван']][1]['quantity'] * store[goods['Диван
 sofa_cost_total = sofa_cost + sofa_cost2
 sofa_quantity = store[goods['Диван']][0]['quantity'] + store[goods['Диван']][1]['quantity']
 print('Диван -', sofa_quantity, 'шт, стоимость', sofa_cost_total, 'руб')
-# TODO Аналогично с диванами и стульями
+
 
 
 chair_cost = store[goods['Стул']][0]['quantity'] * store[goods['Стул']][0]['price']
